@@ -15,6 +15,14 @@
 		0D459A1223CC7609008A313A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D459A1023CC7609008A313A /* LaunchScreen.storyboard */; };
 		0D459A1523CC7609008A313A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D459A1423CC7609008A313A /* main.m */; };
 		0D459A1F23CC7609008A313A /* InheritancePlaygroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D459A1E23CC7609008A313A /* InheritancePlaygroundTests.m */; };
+		0D459A2B23CC761D008A313A /* RootClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D459A2A23CC761D008A313A /* RootClass.m */; };
+		0D459A2E23CC7626008A313A /* ChildClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D459A2D23CC7626008A313A /* ChildClass.m */; };
+		0D459A3423CC7686008A313A /* RootClass+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D459A3323CC7686008A313A /* RootClass+Category.m */; };
+		0D459A3623CC7711008A313A /* RootClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D459A2923CC761D008A313A /* RootClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D459A3723CC7713008A313A /* ChildClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D459A2C23CC7626008A313A /* ChildClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D459A3823CC7715008A313A /* RootClass+Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D459A3223CC7686008A313A /* RootClass+Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D459A3B23CC7FF7008A313A /* GrandchildClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D459A3923CC7FF7008A313A /* GrandchildClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D459A3C23CC7FF7008A313A /* GrandchildClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D459A3A23CC7FF7008A313A /* GrandchildClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +51,14 @@
 		0D459A1A23CC7609008A313A /* InheritancePlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InheritancePlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D459A1E23CC7609008A313A /* InheritancePlaygroundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InheritancePlaygroundTests.m; sourceTree = "<group>"; };
 		0D459A2023CC7609008A313A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D459A2923CC761D008A313A /* RootClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootClass.h; sourceTree = "<group>"; };
+		0D459A2A23CC761D008A313A /* RootClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootClass.m; sourceTree = "<group>"; };
+		0D459A2C23CC7626008A313A /* ChildClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChildClass.h; sourceTree = "<group>"; };
+		0D459A2D23CC7626008A313A /* ChildClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChildClass.m; sourceTree = "<group>"; };
+		0D459A3223CC7686008A313A /* RootClass+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RootClass+Category.h"; sourceTree = "<group>"; };
+		0D459A3323CC7686008A313A /* RootClass+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RootClass+Category.m"; sourceTree = "<group>"; };
+		0D459A3923CC7FF7008A313A /* GrandchildClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GrandchildClass.h; sourceTree = "<group>"; };
+		0D459A3A23CC7FF7008A313A /* GrandchildClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GrandchildClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +106,14 @@
 				0D459A0623CC7606008A313A /* SceneDelegate.m */,
 				0D459A0823CC7606008A313A /* ViewController.h */,
 				0D459A0923CC7606008A313A /* ViewController.m */,
+				0D459A2923CC761D008A313A /* RootClass.h */,
+				0D459A2A23CC761D008A313A /* RootClass.m */,
+				0D459A2C23CC7626008A313A /* ChildClass.h */,
+				0D459A2D23CC7626008A313A /* ChildClass.m */,
+				0D459A3923CC7FF7008A313A /* GrandchildClass.h */,
+				0D459A3A23CC7FF7008A313A /* GrandchildClass.m */,
+				0D459A3223CC7686008A313A /* RootClass+Category.h */,
+				0D459A3323CC7686008A313A /* RootClass+Category.m */,
 				0D459A0B23CC7606008A313A /* Main.storyboard */,
 				0D459A0E23CC7609008A313A /* Assets.xcassets */,
 				0D459A1023CC7609008A313A /* LaunchScreen.storyboard */,
@@ -110,11 +134,26 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		0D459A3523CC7707008A313A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D459A3623CC7711008A313A /* RootClass.h in Headers */,
+				0D459A3B23CC7FF7008A313A /* GrandchildClass.h in Headers */,
+				0D459A3723CC7713008A313A /* ChildClass.h in Headers */,
+				0D459A3823CC7715008A313A /* RootClass+Category.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		0D4599FE23CC7606008A313A /* InheritancePlayground */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D459A2323CC7609008A313A /* Build configuration list for PBXNativeTarget "InheritancePlayground" */;
 			buildPhases = (
+				0D459A3523CC7707008A313A /* Headers */,
 				0D4599FB23CC7606008A313A /* Sources */,
 				0D4599FC23CC7606008A313A /* Frameworks */,
 				0D4599FD23CC7606008A313A /* Resources */,
@@ -209,7 +248,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D459A0A23CC7606008A313A /* ViewController.m in Sources */,
+				0D459A3423CC7686008A313A /* RootClass+Category.m in Sources */,
+				0D459A3C23CC7FF7008A313A /* GrandchildClass.m in Sources */,
+				0D459A2B23CC761D008A313A /* RootClass.m in Sources */,
 				0D459A0423CC7606008A313A /* AppDelegate.m in Sources */,
+				0D459A2E23CC7626008A313A /* ChildClass.m in Sources */,
 				0D459A1523CC7609008A313A /* main.m in Sources */,
 				0D459A0723CC7606008A313A /* SceneDelegate.m in Sources */,
 			);

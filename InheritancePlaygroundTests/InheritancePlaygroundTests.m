@@ -7,6 +7,10 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "RootClass.h"
+#import "ChildClass.h"
+#import "GrandchildClass.h"
+#import "RootClass+Category.h"
 
 @interface InheritancePlaygroundTests : XCTestCase
 
@@ -14,24 +18,49 @@
 
 @implementation InheritancePlaygroundTests
 
-- (void)setUp {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+- (void)testRootClassCalculation {
+    RootClass* object = [RootClass new];
+    XCTAssertEqual(2, [object calculate]);
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+- (void)testIndirectRootClassCalculation {
+    RootClass* object = [RootClass new];
+    XCTAssertEqual(2, [object calculateIndirectly]);
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testChildClassCalculation {
+    RootClass* object = [ChildClass new];
+    XCTAssertEqual(3, [object calculate]);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testIndirectChildClassCalculation {
+    RootClass* object = [ChildClass new];
+    XCTAssertEqual(3, [object calculateIndirectly]);
+}
+
+- (void)testGrandchildClassCalculation {
+    RootClass* object = [GrandchildClass new];
+    XCTAssertEqual(4, [object calculate]);
+}
+
+- (void)testIndirectGrandchildClassCalculation {
+    RootClass* object = [GrandchildClass new];
+    XCTAssertEqual(4, [object calculateIndirectly]);
+}
+
+- (void)testCalculateInGrandchildSuperclass {
+    RootClass* object = [GrandchildClass new];
+    XCTAssertEqual(3, [object calculateInSuperclass]);
+}
+
+- (void)testCalculateInChildSuperclass {
+    RootClass* object = [ChildClass new];
+    XCTAssertEqual(2, [object calculateInSuperclass]);
+}
+
+- (void)testCalculateInRootSuperclass {
+    RootClass* object = [RootClass new];
+    XCTAssertEqual(0, [object calculateInSuperclass]);
 }
 
 @end
